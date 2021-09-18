@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+h2 {
+    color: red;
+}
+
+
+/* CONTENIDO */
+
+.articulos {}
+
+.figura-llantas {
+    width: 250%;
+    margin: 0 50px 20px 0;
+}
+
+.informacion-llantas {
+    padding: 50px 50px 0 50px;
+    justify-content: end;
+}
