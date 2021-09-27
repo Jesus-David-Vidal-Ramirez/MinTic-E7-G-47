@@ -1,93 +1,55 @@
-<<<<<<< HEAD
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-/* INDEX */
-
-h1 {
-    text-transform: uppercase;
-}
-
-h2 {
-    color: red;
-}
-
-
-/* CONTENIDO */
-
-.articulos {}
-
-.figura-llantas {
-    width: 250%;
-    margin: 0 50px 20px 0;
-}
-
-.informacion-llantas {
-    padding: 50px 50px 0 50px;
-    justify-content: end;
-}
-
-
-/* INFORMACION */
-
-.historia h1 {
-    color: red;
-}
-
-.ambiental p {
-    margin: 30px 200px;
-}
-
-
-/* SESION  */
-
-.login {
-    display: flex;
-    justify-content: center;
-}
-
-.login section {
-    width: 50%;
-}
-
-.login a {
-    margin: 20px 0;
-}
-
-.opciones {
-    display: flex;
-    justify-content: space-around;
-=======
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-h1 {
-    text-transform: uppercase;
-}
-
-h2 {
-    color: red;
-}
-
-
-/* CONTENIDO */
-
-.articulos {}
-
-.figura-llantas {
-    width: 250%;
-    margin: 0 50px 20px 0;
-}
-
-.informacion-llantas {
-    padding: 50px 50px 0 50px;
-    justify-content: end;
->>>>>>> 393176a8cdfd76e73ea845282018d31b8df0f03d
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /* INDEX */
+    
+    h1 {
+        text-transform: uppercase;
+    }
+    
+    h2 {
+        color: red;
+    }
+    /* CONTENIDO */
+    
+    .articulos {}
+    
+    .figura-llantas {
+        width: 250%;
+        margin: 0 50px 20px 0;
+    }
+    
+    .informacion-llantas {
+        padding: 50px 50px 0 50px;
+        justify-content: end;
+    }
+    /* INFORMACION */
+    
+    .historia h1 {
+        color: red;
+    }
+    
+    .ambiental p {
+        margin: 30px 200px;
+    }
+    /* SESION  */
+    
+    .login {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .login section {
+        width: 50%;
+    }
+    
+    .login a {
+        margin: 20px 0;
+    }
+    
+    .opciones {
+        display: flex;
+        justify-content: space-around;
+    }
