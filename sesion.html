@@ -20,30 +20,37 @@
     <header class="header container d-flex justify-content-between mt-4">
 
         <figure class="imagen navbar-brand d-flex">
-            <img src="Imagenes/rueda.svg" alt="Llantas" width="120" height="80">
+            <img src="Imagenes/LogoFinal.png" alt="Logo" width="150" height="100">
         </figure>
-        <h1 class="title">Llantas MinTic</h1>
+        <h1 class="title">Ride With Style</h1>
         <div class="container-fluid d-flex justify-content-end ">
             <nav class="nav navbar navbar-expand-lg navbar-light ">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Inicio</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="articulos.html">Articulos</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Articulos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="articulos-Moto.html">Para Moto</a></li>
+                                <li><a class="dropdown-item" href="articulos-Carro.html">Para Carro</a></li>
+                                <li><a class="dropdown-item" href="articulos-Bicicletas.html">Para Bicicleta</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="informacion.html">Quienes Somos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="sesion.html">Icono</a>
+                            <a class="nav-link" href="sesion.html"><img src="Imagenes/Logo_InicioSesion.png" alt="Inicio Sesion" width="40" height="40"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Icono Cotizacion?</a>
+                            <a class="nav-link" href="#"><img src="Imagenes/Logo-CarroDeCompra.png" alt="Cotizacion" width="40" heigth="40"></a>
                         </li>
                     </ul>
                 </div>
@@ -57,24 +64,28 @@
     <!-- Inicio Contenido -->
     <main class="login m-5 ">
         <section>
-            <form method="get" action="index.html" class="form-control">
+            <form method="get" action="index.html" class="form-control" 
+                style= "padding-right: 80px;
+                        padding-left: 80px;
+                        padding-top: 40px;
+                        padding-bottom: 40px">
                 <div class="mb-3">
                     <label for="usuario" class="form-label">Usuario o correo electronico</label>
                     <input type="text" placeholder="example@gmail.com" class="form-control">
                 </div>
                 <div class="mb-3">
-                    <label for="contraseña" class="form-label mb-3">Contraseña</label>
+                    <label for="contraseña" class="form-label mt-3">Contraseña</label>
                     <input type="password" placeholder="********" class="form-control">
                 </div>
-
-                <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-outline-primary mt-3 w-50 ">Iniciar Sesion</button>
+                <div class="opciones">
+                    <a href="index.html" class="text-primary-center">¿Olvidaste tu contraseña?</a><br>
+                    <p>¿No tienes cuenta? <a href="registro.html">Registrate</a></p>
                 </div>
                 <br>
-                <div class="opciones">
-                    <a href="index.html" class="text-primary ">se te olvido la contraseña</a><br>
-                    <p class="mt-3">¿No tienes cuenta?<a href="#registro">Registrate</a></p>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-outline-primary mt-3 w-40 ">Iniciar Sesion</button>
                 </div>
+                
             </form>
 
         </section>
@@ -83,9 +94,11 @@
 
     <!-- FIN Contenido -->
 
+    <hr class="container">
+
     <!-- Inicio Pie de pagina COMPONENTE -->
 
-    <footer class="footer container mt-5 mb-5 text-center d-flex justify-content-between">
+    <footer class="footer container mt-3 mb-3 text-center d-flex justify-content-between">
 
         <figure class="d-flex">
             <img class="me-3" src="Imagenes/facebook.svg" alt="facebook" width="50px">
