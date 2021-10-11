@@ -2,10 +2,6 @@
 const UsuarioModel = require("../Modelos/UsuariosModel");
 
 module.exports = class UsuariosController {
-    static async getAll(request, response) {
-        const result = await UsuarioModel.find({});
-        response.status(200).json(result);
-    };
 
     static async getAllUser(request, response) {
 
@@ -21,9 +17,8 @@ module.exports = class UsuariosController {
     static async getOneUser(request, response) {
         try {
             const Id = request.params.Id;
-            console.log(Id + 'Jesus');
-            const Usuario = await UsuarioModel.findOne({ id: Id });
-            console.log(Usuario + 'David');
+
+            const Usuario = await UsuarioModel.findOne({ _id: Id });
             if (Usuario != null) {
                 response.status(200).json(Usuario);
             } else {
@@ -34,10 +29,10 @@ module.exports = class UsuariosController {
         }
     };
 
-    static async DeleteUser(resquest, response) {
+    static async DeleteUser(request, response) {
         try {
             const Id = request.params.Id;
-            await UsuarioModel.deleteOne({ Id: Id });
+            await UsuarioModel.deleteOne({ _id: Id });
             response.status(200).json();
         } catch (error) {
             response.status(400).json({ menssage: error.mensagge })
@@ -48,10 +43,9 @@ module.exports = class UsuariosController {
     static async InsertUser(request, response) {
         try {
             const data = request.body;
-            //Validaciones de los datos o se podria realizar en el Fron para
-            //quitar acciones al back
             const Usuario = await UsuarioModel.create(data);
-            response.status(200).json(Usuario);
+            console.log(data);
+            response.status(201).json(Usuario);
         } catch (error) {
             response.status(400).json({ mensagge: error.mensagge });
         }
@@ -61,7 +55,7 @@ module.exports = class UsuariosController {
         try {
             const Id = request.params.Id;
             const data = request.body;
-            const Usuario = await UsuarioModel.updateOne({ Id: Id }, data);
+            const Usuario = await UsuarioModel.updateOne({ _id: Id }, data);
             response.status(200).json(Usuario);
         } catch (error) {
             response.status(400).json({ mensagge: error.mensagge });
