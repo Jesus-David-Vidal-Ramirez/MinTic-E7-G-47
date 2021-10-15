@@ -61,4 +61,24 @@ module.exports = class UsuariosController {
             response.status(400).json({ mensagge: error.mensagge });
         }
     };
+
+    static async validateUser(req, res) {
+        try {
+            const credential = req.body;
+            const Usuario = await UsuarioModel.findOne({ "username": credential.nombre });
+            if (Usuario == undefined || Usuario == null) {
+                res.status(404).json({ "message": "Usuario no existe" });
+            } else if (Usuario.password != credential.password) {
+                res.status(403).json({ "message": "Usuario / contraseña no valido" });
+            } else {
+                Usuario.password = undefined;
+                res.status(200).json(Usuario);
+            }
+
+        } catch (err) {
+            res.status(400).json({ "message": err.message })
+        }
+    }
+
+
 }

@@ -24,9 +24,16 @@ mongoose.connect(process.env.URI_DB)
     .then(() => console.log("Se ha establecido la conexion con la base de datos..."))
     .catch(err => console.error(err));
 
+
+// if (process.env.NODE_ENV === "production") {
+//     app.use(express.static(__dirname + "/site/"));
+//     app.use("*", (req, res) => {
+//         res.sendFile(__dirname + "/site/index.html")
+//     });
+// }
+
 //Escuchando las solicitudes por el puerto 'port'
 app.listen(port, () => {
-
     console.log(`Servidor escuchando a traves de http://127.0.0.1:${port}`);
 
     ///127.0.0.1
